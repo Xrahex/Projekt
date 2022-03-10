@@ -7,5 +7,5 @@ $smarty = new Smarty();
 $smarty->assign('title','Strona');
 $smarty->assign('content','tesat');
 $smarty->display('homepage.tpl');
-a
+
 ?>
