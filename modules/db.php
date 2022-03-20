@@ -3,6 +3,6 @@
 	$host = "localhost";
 	$user = "root";
 	$pass = "";
-	$db = "projekt";
+	$db = "klinika";
 
 ?>
