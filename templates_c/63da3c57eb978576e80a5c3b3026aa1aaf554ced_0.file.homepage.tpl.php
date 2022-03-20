@@ -1,9 +1,33 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.1.0, created on 2022-03-20 13:25:26
+  from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_62371d368f3184_86444675',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
+      1 => 1647779123,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_62371d368f3184_86444675 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8" />
 <meta name="author" content="Klikina Squad">
-    <title>{$title}</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link href="headers.css" rel="stylesheet">
@@ -34,14 +58,21 @@
       </div>
     </header>
 
-{$content}
+<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
 
 
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark text-white mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>
 
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <?php echo '<script'; ?>
+ src="bootstrap/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="bootstrap/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

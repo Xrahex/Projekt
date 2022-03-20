@@ -7,11 +7,9 @@ $smarty = new Smarty();
 $smarty->assign('title','Strona');
 $smarty->assign('content','
 
+<p> adasdawd </p>
 
 
-    <div class="benek" align="center">
-    <img src="https://i.ytimg.com/vi/t6in06p5Oic/maxresdefault.jpg"> </img>
-    </div>
 
 
 ');
