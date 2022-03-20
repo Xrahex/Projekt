@@ -4,15 +4,14 @@ $smarty = new Smarty();
 
 
 
-$smarty->assign('title','O nas');
+$smarty->assign('title','Panel Glowny');
 $smarty->assign('content','
 
-<p> Napisac o nas </p>
 
 
 
 
 ');
-$smarty->display('homepage.tpl');
+$smarty->display('panel.tpl');
 
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-20 13:25:26
+/* Smarty version 4.1.0, created on 2022-03-20 13:57:50
   from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62371d368f3184_86444675',
+  'unifunc' => 'content_623724ce4a9896_87330675',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
-      1 => 1647779123,
+      1 => 1647781064,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62371d368f3184_86444675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_623724ce4a9896_87330675 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -30,8 +30,6 @@ function content_62371d368f3184_86444675 (Smarty_Internal_Template $_smarty_tpl)
 </title>
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-<link href="headers.css" rel="stylesheet">
-<link href="footers.css" rel="stylesheet">
 
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -46,7 +44,6 @@ function content_62371d368f3184_86444675 (Smarty_Internal_Template $_smarty_tpl)
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 text-white">Strona główna</a></li>
             <li><a href="#" class="nav-link px-2 text-white">Cennik</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Terminarz</a></li>
             <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
             <li><a href="o_nas.php" class="nav-link px-2 text-white">O nas</a></li>
           </ul>

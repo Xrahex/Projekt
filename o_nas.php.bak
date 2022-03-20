@@ -4,10 +4,10 @@ $smarty = new Smarty();
 
 
 
-$smarty->assign('title','Strona');
+$smarty->assign('title','Formularz Opinii');
 $smarty->assign('content','
 
-<p> adasdawd </p>
+<p> Napisac o nas </p>
 
 
 
