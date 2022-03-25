@@ -19,8 +19,8 @@
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 text-white">Strona główna</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Cennik</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
+            <li><a href="cennik.php" class="nav-link px-2 text-white">Cennik</a></li>
+            <li><a href="faq.php" class="nav-link px-2 text-white">FAQ</a></li>
             <li><a href="o_nas.php" class="nav-link px-2 text-white">O nas</a></li>
           </ul>
 
