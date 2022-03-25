@@ -25,7 +25,7 @@
           </ul>
 
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Menu</button>
+            <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='logowanie.php';">Menu</button>
           </div>
         </div>
       </div>

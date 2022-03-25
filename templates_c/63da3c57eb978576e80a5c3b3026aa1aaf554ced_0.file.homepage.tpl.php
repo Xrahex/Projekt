@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-24 15:55:48
+/* Smarty version 4.1.0, created on 2022-03-25 14:24:04
   from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_623c867438d000_71708167',
+  'unifunc' => 'content_623dc274431bb1_69144385',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
-      1 => 1648133745,
+      1 => 1648214641,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_623c867438d000_71708167 (Smarty_Internal_Template $_smarty_tpl) {
+function content_623dc274431bb1_69144385 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -49,7 +49,7 @@ function content_623c867438d000_71708167 (Smarty_Internal_Template $_smarty_tpl)
           </ul>
 
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Menu</button>
+            <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='logowanie.php';">Menu</button>
           </div>
         </div>
       </div>

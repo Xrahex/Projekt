@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['log']==1) {
-header("Location: success.php");
+if(@$_SESSION['log']==1) {
+header("Location: panel_pacjent.php");
 }
 
 ?>
@@ -27,20 +27,20 @@ header("Location: success.php");
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Logowanie</p>
 
-                <form class="mx-1 mx-md-4" method="post" action="logowanie.php">
+                <form class="mx-1 mx-md-4 needs-validation" method="post" action="logowanie.php" >
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="login" name="login" class="form-control" required/>
+                    <div class="form-floating flex-fill mb-0">
+                      <input type="text" id="login" name="login" class="form-control" placeholder="Login" required autocomplete="off"/>
                       <label class="form-label" for="form3Example1c">Login</label>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="haslo" name="haslo" class="form-control" required/>
+                    <div class="form-floating flex-fill mb-0">
+                      <input type="password" id="haslo" name="haslo" class="form-control" placeholder="Hasło" required autocomplete="off"/>
                       <label class="form-label" for="form3Example3c">Hasło</label>
                     </div>
                   </div>
@@ -55,13 +55,13 @@ header("Location: success.php");
                       required
                     />
                     <label class="form-check-label" for="form2Example3">
-                      Zgadzam się ze wszystkimi warunkami świadczenia usług
+                      Akceptuję warunki regulaminu.
                     </label>
                   </div>
-
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="submit" class="btn btn-primary btn-lg" >Zaloguj się</button>
-                  </div>
+                    <button type="reset" class="btn btn-danger btn-lg" >Wyczyść</button>
+                </div>
 
                 </form>
                 <?php
@@ -70,15 +70,14 @@ header("Location: success.php");
                   mysqli_set_charset($conn,"utf8");
                   @$haslo=$_POST['haslo'];
                   @$login=$_POST['login'];
-                  echo $haslo;
-                  echo $login;
+                  if(isset($_POST['login'])){
                   $q="SELECT * From users Where login='$login' AND haslo='$haslo'";
                   $result=mysqli_query($conn,$q);
                   $ile=mysqli_num_rows($result);
-                  echo $ile;
                   if($ile==0)
                   {
-	                   echo "Nie ma takiego użytkownika!";
+                    echo "<br>";
+	                   echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Nie ma takiego użytkownika!</strong><button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>  </div>";
                    }
                    else
                    {
@@ -87,10 +86,10 @@ header("Location: success.php");
                         $_SESSION['login'] = $obj['login'];
                         $_SESSION['typ'] = $obj['typ'];
                       }
-                     header('location:success.php');
+                     header('location:panel_pacjent');
                      $_SESSION['log'] = 1;
 
-                   }
+                   }}
                   mysqli_close($conn);
                 ?>
             </div>

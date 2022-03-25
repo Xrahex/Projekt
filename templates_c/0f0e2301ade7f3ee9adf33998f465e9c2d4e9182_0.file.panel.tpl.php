@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-25 13:34:57
+/* Smarty version 4.1.0, created on 2022-03-25 13:49:50
   from 'C:\xampp\htdocs\Projekt\templates\panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_623db6f1b3f529_38385173',
+  'unifunc' => 'content_623dba6e1b6040_00638068',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f0e2301ade7f3ee9adf33998f465e9c2d4e9182' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel.tpl',
-      1 => 1648211694,
+      1 => 1648212488,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl) {
+function content_623dba6e1b6040_00638068 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -31,21 +31,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link href="sidebars.css" rel="stylesheet">
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
 
 </head>
 
@@ -75,8 +61,8 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
           Wizyty
         </a>
       </li>
-	 
-	  
+
+
 	  <li>
         <a href="#" class="nav-link text-white">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
@@ -87,7 +73,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
           Historia leczenia
         </a>
       </li>
-	  
+
 	  	  <li>
         <a href="#" class="nav-link text-white">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bandaid" viewBox="0 0 16 16">
@@ -97,7 +83,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
           E-recepta
         </a>
       </li>
-	  
+
 	  	  	  <li>
         <a href="#" class="nav-link text-white">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
@@ -107,7 +93,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
           Faktury
         </a>
       </li>
-	  
+
 	  	  <li>
         <a href="#" class="nav-link text-white">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
@@ -117,7 +103,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
           Zgłoszenia
         </a>
       </li>
-	  
+
 	  <li>
         <a href="#" class="nav-link text-white">
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
@@ -128,7 +114,7 @@ function content_623db6f1b3f529_38385173 (Smarty_Internal_Template $_smarty_tpl)
         </a>
       </li>
       <li>
-        <a href="index.php" class="nav-link text-white">
+        <a href="modules/logout.php" class="nav-link text-white">
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
 		<path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
 		<path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
