@@ -10,13 +10,13 @@ $smarty = new Smarty();
 
 
 
-$smarty->assign('title','Panel Glowny');
+$smarty->assign('title','Strona');
 $smarty->assign('content','');
 
 
 if ($_SESSION['typ']==1)
 {
-$smarty->display('panel_admin.tpl');
+$smarty->display('panel_administrator.tpl');
 }
 if ($_SESSION['typ']==2)
 {
@@ -24,6 +24,6 @@ $smarty->display('panel_lekarz.tpl');
 }
 if ($_SESSION['typ']==3)
 {
-$smarty->display('panel.tpl');
+$smarty->display('panel_pacjent.tpl');
 }
 ?>

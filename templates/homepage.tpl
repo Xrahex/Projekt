@@ -6,22 +6,20 @@
     <title>{$title}</title>
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-
+<link rel="stylesheet" href="bootstrap/index.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
     <header class="p-3 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
+          
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.php" class="nav-link px-2 text-white">Strona główna</a></li>
-            <li><a href="cennik.php" class="nav-link px-2 text-white">Cennik</a></li>
-            <li><a href="faq.php" class="nav-link px-2 text-white">FAQ</a></li>
-            <li><a href="o_nas.php" class="nav-link px-2 text-white">O nas</a></li>
+            <li><a href="index.php" class="nav-link px-2 text-white najedz">Strona główna</a></li>
+            <li><a href="cennik.php" class="nav-link px-2 text-white najedz">Cennik</a></li>
+            <li><a href="faq.php" class="nav-link px-2 text-white najedz">FAQ</a></li>
+            <li><a href="o_nas.php" class="nav-link px-2 text-white najedz">O nas</a></li>
           </ul>
 
           <div class="text-end">

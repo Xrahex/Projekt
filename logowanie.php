@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(@$_SESSION['log']==1) {
-header("Location: panel_pacjent.php");
+header("Location: panel.php");
 }
 
 ?>
@@ -86,7 +86,7 @@ header("Location: panel_pacjent.php");
                         $_SESSION['login'] = $obj['login'];
                         $_SESSION['typ'] = $obj['typ'];
                       }
-                     header('location:panel_pacjent');
+                     header('location:panel.php');
                      $_SESSION['log'] = 1;
 
                    }}
