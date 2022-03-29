@@ -1,33 +1,9 @@
-<?php
-/* Smarty version 4.1.0, created on 2022-03-28 18:26:45
-  from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '4.1.0',
-  'unifunc' => 'content_6241e1c5195096_24537758',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
-      1 => 1648447311,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8" />
 <meta name="author" content="Klikina Squad">
-    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</title>
+    <title>{$title}</title>
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/index.css">
@@ -44,6 +20,34 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
 <link rel="icon" type="image/png" sizes="32x32" href="../img/fav/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../img/fav/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../img/fav/favicon-16x16.png">
+<link href='lib/main.css' rel='stylesheet' />
+<script src='fullcalendar/core/locales/pl.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src='lib/main.js'></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    themeSystem: 'bootstrap5',
+    locale: 'pl',
+    height: 750,
+    selectable:true,
+    selectHelper:true,
+    buttonText: {
+      today: 'dzisiaj'
+    },
+    events: 'modules/kalendarz/wczytaj.php',
+    eventDisplay: 'block',
+    displayEventEnd: 'true',
+    firstDay: 1
+  });
+  calendar.render();
+  calendar.fullCalendar('refetchEvents');
+});
+</script>
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -54,7 +58,7 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
     <header class="p-3 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          
+
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 text-white najedz">Strona główna</a></li>
@@ -70,21 +74,14 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </header>
 
-<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
-
+{$content}
 
 
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark text-white mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>
 
-    <?php echo '<script'; ?>
- src="bootstrap/bootstrap.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="bootstrap/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<?php }
-}

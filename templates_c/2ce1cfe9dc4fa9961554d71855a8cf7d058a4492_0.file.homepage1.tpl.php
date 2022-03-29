@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-28 18:26:45
-  from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
+/* Smarty version 4.1.0, created on 2022-03-28 18:29:12
+  from 'C:\xampp\htdocs\Projekt\templates\homepage1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6241e1c5195096_24537758',
+  'unifunc' => 'content_6241e258262da3_23289753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
+    '2ce1cfe9dc4fa9961554d71855a8cf7d058a4492' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
-      1 => 1648447311,
+      0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage1.tpl',
+      1 => 1648484682,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6241e258262da3_23289753 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -31,6 +31,9 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/index.css">
+<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
+<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
 <link rel="apple-touch-icon" sizes="57x57" href="../img/fav/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../img/fav/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="../img/fav/apple-icon-72x72.png">
@@ -54,7 +57,7 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
     <header class="p-3 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          
+
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 text-white najedz">Strona główna</a></li>
@@ -77,7 +80,18 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark text-white mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>
-
+      <?php echo '<script'; ?>
+ src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"><?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="bootstrap/bootstrap.min.js"><?php echo '</script'; ?>
 >
