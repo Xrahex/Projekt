@@ -1,0 +1,24 @@
+<?php
+require_once("Smarty/libs/Smarty.class.php");
+$smarty = new Smarty();
+
+
+
+$smarty->assign('title','Rejestracja pacjenta');
+$smarty->assign('content','
+
+
+
+
+');
+
+if ($_SESSION['typ']==1)
+{
+$smarty->display('panel_administrator.tpl');
+}
+if ($_SESSION['typ']==2)
+{
+$smarty->display('panel_lekarz.tpl');
+}
+?>
+
