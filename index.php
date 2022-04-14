@@ -9,8 +9,8 @@ $smarty->assign('content','
 
 
 
-    <div class="benek" align="center">
-    <img src="https://i.ytimg.com/vi/t6in06p5Oic/maxresdefault.jpg"> </img>
+    <div class="logo" align="center">
+    <img src="img/logo.png" style="width:600px; height:800px;"> </img>
     </div>
 
 
