@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-29 15:48:54
+/* Smarty version 4.1.0, created on 2022-04-14 11:49:44
   from 'C:\xampp\htdocs\Projekt\templates\panel_pacjent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62430e460b0df0_09794639',
+  'unifunc' => 'content_6257ee38778609_42165690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52612b2039f7dfb04329c933b8b59c155c428242' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_pacjent.tpl',
-      1 => 1648561732,
+      1 => 1649929782,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62430e460b0df0_09794639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6257ee38778609_42165690 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -31,7 +31,44 @@ function content_62430e460b0df0_09794639 (Smarty_Internal_Template $_smarty_tpl)
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/sidebars.css">
-
+<link href='lib/main.css' rel='stylesheet' />
+<?php echo '<script'; ?>
+ src='fullcalendar/core/locales/pl.js'><?php echo '</script'; ?>
+>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src='lib/main.js'><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    themeSystem: 'bootstrap5',
+    locale: 'pl',
+    height: 750,
+    selectable:true,
+    selectHelper:true,
+    buttonText: {
+      today: 'dzisiaj'
+    },
+    events: 'test.php',
+    eventDisplay: 'block',
+    displayEventEnd: 'true',
+    firstDay: 1
+  });
+  calendar.render();
+  calendar.fullCalendar('refetchEvents');
+});
+<?php echo '</script'; ?>
+>
 
 </head>
 
@@ -125,16 +162,13 @@ function content_62430e460b0df0_09794639 (Smarty_Internal_Template $_smarty_tpl)
     </ul>
   </div>
 </nav>
-
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
+<div style="width:60%;">
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
-<a> asdasdasd </a>
 </div>
 </div>
-</div>
-
+</main>
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 bg-dark text-white fixed-bottom mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>

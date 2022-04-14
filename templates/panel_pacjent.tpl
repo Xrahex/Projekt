@@ -7,7 +7,34 @@
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/sidebars.css">
-
+<link href='lib/main.css' rel='stylesheet' />
+<script src='fullcalendar/core/locales/pl.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src='lib/main.js'></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    themeSystem: 'bootstrap5',
+    locale: 'pl',
+    height: 750,
+    selectable:true,
+    selectHelper:true,
+    buttonText: {
+      today: 'dzisiaj'
+    },
+    events: 'test.php',
+    eventDisplay: 'block',
+    displayEventEnd: 'true',
+    firstDay: 1
+  });
+  calendar.render();
+  calendar.fullCalendar('refetchEvents');
+});
+</script>
 
 </head>
 
@@ -101,15 +128,12 @@
     </ul>
   </div>
 </nav>
-
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
+<div style="width:60%;">
 {$content}
-<a> asdasdasd </a>
 </div>
 </div>
-</div>
-
+</main>
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 bg-dark text-white fixed-bottom mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>

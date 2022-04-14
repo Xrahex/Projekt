@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-28 18:26:45
+/* Smarty version 4.1.0, created on 2022-04-03 13:46:01
   from 'C:\xampp\htdocs\Projekt\templates\homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6241e1c5195096_24537758',
+  'unifunc' => 'content_624988f95100d9_49686736',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63da3c57eb978576e80a5c3b3026aa1aaf554ced' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\homepage.tpl',
-      1 => 1648447311,
+      1 => 1648986209,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624988f95100d9_49686736 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -71,7 +71,6 @@ function content_6241e1c5195096_24537758 (Smarty_Internal_Template $_smarty_tpl)
     </header>
 
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
-
 
 
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark text-white mt-auto">
