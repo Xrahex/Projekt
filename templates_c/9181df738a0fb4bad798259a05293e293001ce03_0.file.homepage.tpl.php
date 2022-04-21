@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-21 14:48:57
+/* Smarty version 4.1.0, created on 2022-04-21 16:08:21
   from 'C:\xampp\htdocs\projekt\templates\homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_626152b9cbabd4_61155844',
+  'unifunc' => 'content_626165551cb161_53200977',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9181df738a0fb4bad798259a05293e293001ce03' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projekt\\templates\\homepage.tpl',
-      1 => 1649931083,
+      1 => 1650549166,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_626152b9cbabd4_61155844 (Smarty_Internal_Template $_smarty_tpl) {
+function content_626165551cb161_53200977 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -54,12 +54,12 @@ function content_626152b9cbabd4_61155844 (Smarty_Internal_Template $_smarty_tpl)
     <header class="p-3 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          
+
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 text-white najedz">Strona główna</a></li>
             <li><a href="cennik.php" class="nav-link px-2 text-white najedz">Cennik</a></li>
-            <li><a href="faq.php" class="nav-link px-2 text-white najedz">FAQ</a></li>
+            <li><a href="faq/faq.html" class="nav-link px-2 text-white najedz">FAQ</a></li>
             <li><a href="o_nas.php" class="nav-link px-2 text-white najedz">O nas</a></li>
           </ul>
 

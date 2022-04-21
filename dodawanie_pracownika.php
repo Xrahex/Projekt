@@ -11,8 +11,8 @@ $smarty = new Smarty();
 $smarty->assign('title','Dodawanie Pracownika');
 $smarty->assign('content','
 
-<br><br><br><br><br><br><br>
-<form class="mx-1 mx-md-4" action="modules/register.php" method="post">
+<br><br><br><br>
+<form class="mx-1 mx-md-4" action="modules/rejestracja_pracownika.php" method="post">
   <div class="row">
     <center>
   <h1>Dodawanie Pracownika</h1>
