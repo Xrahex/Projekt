@@ -8,16 +8,14 @@ header("Location: logowanie.php");
 require_once("Smarty/libs/Smarty.class.php");
 $smarty = new Smarty();
 
-
-
-$smarty->assign('title','Zarejestruj pacjenta');
+$smarty->assign('title','Dodawanie Pracownika');
 $smarty->assign('content','
 
-<br><br><br>
+<br><br><br><br><br><br><br>
 <form class="mx-1 mx-md-4" action="modules/register.php" method="post">
   <div class="row">
     <center>
-  <h1>Rejestracja pacjenta</h1>
+  <h1>Dodawanie Pracownika</h1>
   </center>
   </div>
   <br>
@@ -43,8 +41,8 @@ $smarty->assign('content','
 <div class="d-flex flex-row align-items-center mb-4 col-md-6">
 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
 <div class="form-floating flex-fill mb-0">
-<input type="text" id="pesel" name="pesel" class="form-control" placeholder="Pesel" required autocomplete="off"/>
-<label class="form-label" for="form3Example1c">Pesel</label>
+<input type="text" id="profesja" name="profesja" class="form-control" placeholder="Profesja" required autocomplete="off"/>
+<label class="form-label" for="form3Example1c">Profesja</label>
 </div>
 </div>
 
@@ -54,14 +52,6 @@ $smarty->assign('content','
 <input type="text" id="nr_telefonu" name="nr_telefonu" class="form-control" placeholder="Nr. telefonu" required autocomplete="off"/>
 <label class="form-label" for="form3Example1c">Nr. telefonu</label>
 </div>
-</div>
-</div>
-
-<div class="d-flex flex-row align-items-center mb-4 col-md-12">
-<i class="fas fa-user fa-lg me-3 fa-fw"></i>
-<div class="form-floating flex-fill mb-0">
-<input type="text" id="email" name="email" class="form-control" placeholder="Email" required autocomplete="off"/>
-<label class="form-label" for="form3Example1c">Email</label>
 </div>
 </div>
 
@@ -100,7 +90,6 @@ $smarty->assign('content','
 </div>
 </div>
 </div>
-
 <div class="row">
 <div class="btn-group flex-row align-items-center mb-4 col-md-6" role="group" aria-label="Basic example">
   <button type="submit" class="btn btn-primary btn-lg" >Zarejestruj</button>
@@ -111,14 +100,5 @@ $smarty->assign('content','
 </div>
 </form>
 ');
-
-
-if ($_SESSION['typ']==1)
-{
 $smarty->display('panel_administrator.tpl');
-}
-if ($_SESSION['typ']==2)
-{
-$smarty->display('panel_lekarz.tpl');
-}
 ?>
