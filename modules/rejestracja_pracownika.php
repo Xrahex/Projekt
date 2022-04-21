@@ -1,7 +1,7 @@
 <?php
 @$imie=$_POST["imie"];
 @$nazwisko=$_POST["nazwisko"];
-@$pesel=$_POST["profesja"];
+@$profesja=$_POST["profesja"];
 @$miejscowosc=$_POST["miejscowosc"];
 @$kod_pocztowy=$_POST["kod_pocztowy"];
 @$ulica=$_POST["ulica"];

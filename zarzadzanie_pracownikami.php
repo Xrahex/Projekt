@@ -21,7 +21,7 @@ $smarty->assign('content','
   <a href="dodawanie_pracownika.php" class="btn btn-primary btn-success btn-lg" role="button" aria-pressed="true">Zatrudnij</a>
   </div>
   <div class="btn-group flex-row align-items-center mb-4 col-md-4" role="group" aria-label="Basic example">
-  <a href="index.php" class="btn btn-primary btn-danger btn-lg" role="button" aria-pressed="true">Zwolnij</a>
+  <a href="usuwanie_pracownika.php" class="btn btn-primary btn-danger btn-lg" role="button" aria-pressed="true">Zwolnij</a>
   </div>
   <div class="btn-group flex-row align-items-center mb-4 col-md-4" role="group" aria-label="Basic example">
     <a href="index.php" class="btn btn-primary btn-primary btn-lg" role="button" aria-pressed="true">Edytuj</a>
