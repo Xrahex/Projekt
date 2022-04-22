@@ -11,14 +11,15 @@ $smarty = new Smarty();
 
 
 $smarty->assign('title','Zarejestruj pacjenta');
+$smarty->assign('menu','');
 $smarty->assign('content','
 
 <br><br><br>
+<div class="card mb-4">
+    <div class="card-header" align="center"><h1>Rejestracja pacjenta</h1></div>
+    <div class="card-body">
 <form class="mx-1 mx-md-4" action="modules/register.php" method="post">
   <div class="row">
-    <center>
-  <h1>Rejestracja pacjenta</h1>
-  </center>
   </div>
   <br>
 <div class="row">
@@ -110,6 +111,8 @@ $smarty->assign('content','
   </div>
 </div>
 </form>
+</div>
+</div>
 ');
 
 

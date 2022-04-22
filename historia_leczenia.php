@@ -11,6 +11,7 @@ $smarty = new Smarty();
 
 
 $smarty->assign('title','Historia leczenia');
+$smarty->assign('menu','');
 $smarty->assign('content','');
 
 

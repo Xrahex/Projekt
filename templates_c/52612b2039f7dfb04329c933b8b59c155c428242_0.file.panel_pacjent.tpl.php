@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-14 11:49:44
+/* Smarty version 4.1.0, created on 2022-04-22 13:02:34
   from 'C:\xampp\htdocs\Projekt\templates\panel_pacjent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6257ee38778609_42165690',
+  'unifunc' => 'content_62628b4aca57c6_78258683',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52612b2039f7dfb04329c933b8b59c155c428242' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_pacjent.tpl',
-      1 => 1649929782,
+      1 => 1650624671,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6257ee38778609_42165690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62628b4aca57c6_78258683 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
 		<path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Zm7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
 		</svg>
-          Wizyty
+          Wizyty <span class="badge badge-light">9</span>
         </a>
       </li>
 	  <li>
@@ -165,6 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
 <div style="width:60%;">
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
+<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
 </div>
 </div>

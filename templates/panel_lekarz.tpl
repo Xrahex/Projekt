@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
 <div style="width:60%;">
 {$content}
+{$menu}
 </div>
 </div>
 </main>

@@ -9,15 +9,14 @@ require_once("Smarty/libs/Smarty.class.php");
 $smarty = new Smarty();
 
 $smarty->assign('title','Dodawanie Pracownika');
+$smarty->assign('menu','');
 $smarty->assign('content','
 
 <br><br><br><br>
+<div class="card mb-4">
+    <div class="card-header" align="center"><h1>Dodawanie Pracownika</h1></div>
+    <div class="card-body">
 <form class="mx-1 mx-md-4" action="modules/rejestracja_pracownika.php" method="post">
-  <div class="row">
-    <center>
-  <h1>Dodawanie Pracownika</h1>
-  </center>
-  </div>
   <br>
 <div class="row">
 <div class="d-flex flex-row align-items-center mb-4 col-md-6">
@@ -99,6 +98,8 @@ $smarty->assign('content','
   </div>
 </div>
 </form>
+</div>
+</div>
 ');
 $smarty->display('panel_administrator.tpl');
 ?>

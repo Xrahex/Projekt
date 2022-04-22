@@ -11,6 +11,7 @@ $smarty = new Smarty();
 
 
 $smarty->assign('title','Faktury');
+$smarty->assign('menu','');
 $smarty->assign('content','');
 
 if ($_SESSION['typ']==1)

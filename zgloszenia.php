@@ -11,6 +11,7 @@ $smarty = new Smarty();
 
 
 $smarty->assign('title','Zgłoszenia');
+$smarty->assign('menu','');
 $smarty->assign('content','');
 
 

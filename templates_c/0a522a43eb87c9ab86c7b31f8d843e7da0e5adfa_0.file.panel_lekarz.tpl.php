@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-14 11:46:39
+/* Smarty version 4.1.0, created on 2022-04-22 12:57:08
   from 'C:\xampp\htdocs\Projekt\templates\panel_lekarz.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6257ed7fa63031_79655653',
+  'unifunc' => 'content_62628a04339688_93238818',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a522a43eb87c9ab86c7b31f8d843e7da0e5adfa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_lekarz.tpl',
-      1 => 1649929588,
+      1 => 1650625021,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6257ed7fa63031_79655653 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62628a04339688_93238818 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -52,12 +52,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'bootstrap5',
+    headerToolbar:{
+      center:'mycustomButton'
+    },
     locale: 'pl',
     height: 750,
     selectable:true,
     selectHelper:true,
     buttonText: {
       today: 'dzisiaj'
+    },
+    customButtons: {
+      mycustomButton:{
+        text:'Umów wizytę',
+        click:function() {
+          window.location='dodanie_wizyty.php';
+        }
+      }
     },
     events: 'test.php',
     eventDisplay: 'block',
@@ -116,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
 		<path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Zm7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
 		</svg>
-          Wizyty
+          Wizyty <span class="badge badge-light">9</span>
         </a>
       </li>
 
@@ -163,10 +174,11 @@ document.addEventListener('DOMContentLoaded', function() {
     </ul>
   </div>
 </nav>
-
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
 <div style="width:60%;">
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
+<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
 </div>
 </div>
