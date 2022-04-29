@@ -5,8 +5,8 @@ header("Location: logowanie.php");
 }
 ?>
 <?php
-require_once("Smarty/libs/Smarty.class.php");
-$smarty = new Smarty();
+require_once("Smarty/libs/SmartyBC.class.php");
+$smarty = new SmartyBC();
 
 
 
@@ -26,7 +26,9 @@ $smarty->assign('menu','
                       <h6 class="mb-0">Imie</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      $q1
+
+                    $test
+
                     </div>
                   </div>
                   <hr>
@@ -103,6 +105,11 @@ $smarty->assign('menu','
                   </div>
 </div>
 ');
+require_once "modules/db.php";
+$conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z bazą danych");
+mysqli_set_charset($conn,"utf8");
+$login=$_SESSION['login'];
+
 
 if ($_SESSION['typ']==1)
 {
@@ -110,10 +117,54 @@ $smarty->display('panel_administrator.tpl');
 }
 if ($_SESSION['typ']==2)
 {
-$smarty->display('panel_lekarz.tpl');
+$q="SELECT * From pracownicy, users Where pracownicy.login='$login'";
+$result=mysqli_query($conn,$q);
+while($obj=mysqli_fetch_assoc($result))
+{
+  $imie=$obj['imie'];
+  $nazwisko=$obj['nazwisko'];
+  $telefon=$obj['nr_telefonu'];
+  $mail=$obj['email'];
+  $miejscowosc=$obj['miejscowosc'];
+  $poczta=$obj['kod_pocztowy'];
+  $ulica=$obj['ulica'];
+  $dom=$obj['nr_domu'];
+}
+$smarty->assign('imie',$imie);
+$smarty->assign('nazwisko',$nazwisko);
+$smarty->assign('telefon',$telefon);
+$smarty->assign('email',$mail);
+$smarty->assign('miejscowosc',$miejscowosc);
+$smarty->assign('poczta',$poczta);
+$smarty->assign('ulica',$ulica);
+$smarty->assign('dom',$dom);
+$smarty->display('panell.tpl');
 }
 if ($_SESSION['typ']==3)
 {
-$smarty->display('panel_pacjent.tpl');
+  $q="SELECT * From pacjenci, users Where pacjenci.login='$login'";
+  $result=mysqli_query($conn,$q);
+  while($obj=mysqli_fetch_assoc($result))
+  {
+    $imie=$obj['imie'];
+    $nazwisko=$obj['nazwisko'];
+    $pesel=$obj['pesel'];
+    $telefon=$obj['nr_telefonu'];
+    $mail=$obj['email'];
+    $miejscowosc=$obj['miejscowosc'];
+    $poczta=$obj['kod_pocztowy'];
+    $ulica=$obj['ulica'];
+    $dom=$obj['nr_domu'];
+  }
+  $smarty->assign('imie',$imie);
+  $smarty->assign('nazwisko',$nazwisko);
+  $smarty->assign('pesel',$pesel);
+  $smarty->assign('telefon',$telefon);
+  $smarty->assign('email',$mail);
+  $smarty->assign('miejscowosc',$miejscowosc);
+  $smarty->assign('poczta',$poczta);
+  $smarty->assign('ulica',$ulica);
+  $smarty->assign('dom',$dom);
+$smarty->display('panelp.tpl');
 }
 ?>

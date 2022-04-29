@@ -26,7 +26,7 @@ $smarty->assign('content','
 </div>
 </form>
 ');
-require_once "db.php";
+require_once "modules/db.php";
 $conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z baza danych");
 mysqli_set_charset($conn,"utf8");
 $q1 = $mysqli->query("SELECT * FROM pracownicy");
