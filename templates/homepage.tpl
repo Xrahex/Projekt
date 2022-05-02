@@ -59,7 +59,7 @@
               <a class="nav-link" aria-current="page" href="cennik.php">Cennik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="faq/faq.html">FAQ</a>
+              <a class="nav-link" aria-current="page" href="faq.php">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="o_nas.php">O nas</a>
