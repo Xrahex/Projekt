@@ -5,22 +5,12 @@ header("Location: logowanie.php");
 }
 ?>
 <?php
-require_once("Smarty/libs/Smarty.class.php");
-$smarty = new Smarty();
-
-
+require_once("Smarty/libs/SmartyBC.class.php");
+$smarty = new SmartyBC();
 
 $smarty->assign('title','Zgłoszenia');
 $smarty->assign('menu','');
 $smarty->assign('content','');
-
-
-if ($_SESSION['typ']==1)
-{
-$smarty->display('panel_administrator.tpl');
-}
-if ($_SESSION['typ']==3)
-{
+$smarty->assign('content1','require_once "modules/zglos.php";');
 $smarty->display('panel_pacjent.tpl');
-}
 ?>

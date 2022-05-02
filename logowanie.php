@@ -71,7 +71,7 @@ header("Location:panel.php");
                   @$haslo=$_POST['haslo'];
                   @$login=$_POST['login'];
                   if(isset($_POST['login'])){
-                  $q="SELECT * From users Where login='$login' AND haslo='$haslo'";
+                  $q="SELECT * From users Where login='$login' AND haslo='$haslo' and czy_zalogowany=0";
                   $result=mysqli_query($conn,$q);
                   $ile=mysqli_num_rows($result);
                   if($ile==0)
@@ -85,7 +85,10 @@ header("Location:panel.php");
                       {
                         $_SESSION['login'] = $obj['login'];
                         $_SESSION['typ'] = $obj['typ'];
+                        $_SESSION['id'] = $obj['id'];
                       }
+                      $q1="Update users SET czy_zalogowany=1 WHERE login='$login'";
+                      $result1=mysqli_query($conn,$q1);
                      header('location:panel.php');
                      $_SESSION['log'] = 1;
 

@@ -5,13 +5,14 @@ header("Location: logowanie.php");
 }
 ?>
 <?php
-require_once("Smarty/libs/Smarty.class.php");
-$smarty = new Smarty();
+require_once("Smarty/libs/SmartyBC.class.php");
+$smarty = new SmartyBC();
 
 
 
 $smarty->assign('title','Zgłoś zabieg');
 $smarty->assign('menu','');
+
 $smarty->assign('content','
 
 <br><br>
@@ -69,6 +70,10 @@ $smarty->assign('content','
 </div>
 </div>
 ');
+$smarty->assign('content1',' require_once "modules/zabiegi.php";');
+
+
+
 if ($_SESSION['typ']==2)
 {
 $smarty->display('panel_lekarz.tpl');

@@ -1,24 +1,56 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.1.0, created on 2022-05-02 13:45:15
+  from 'C:\xampp\htdocs\Projekt\templates\panel_administrator1.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_626fc44bbb91b7_30128610',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '580eff1db6a55df60536177e5e24053603c02779' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_administrator1.tpl',
+      1 => 1650634637,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_626fc44bbb91b7_30128610 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8" />
 <meta name="author" content="Klikina Squad">
-    <title>{$title}</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 <!--Style-->
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/sidebars.css">
 <link href='lib/main.css' rel='stylesheet' />
-<script src='fullcalendar/core/locales/pl.js'></script>
+<?php echo '<script'; ?>
+ src='fullcalendar/core/locales/pl.js'><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src='fullcalendar/core/locales/pl.js'><?php echo '</script'; ?>
+>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href='modules/jquery.dataTables.bootstrap5.css' rel='stylesheet' />
-<script src="modules/jquery.dataTables.bootstrap5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src='lib/main.js'></script>
-<script>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src='lib/main.js'><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -49,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar.render();
   calendar.fullCalendar('refetchEvents');
 });
-</script>
+<?php echo '</script'; ?>
+>
 
 </head>
 
@@ -147,17 +180,33 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100 d-flex justify-content-center p-2">
 <div style="width:60%;">
-{$content}
-{php}
-{$content1}
-{/php}
+<?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['php'][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['php'][0] : null;
+if (!is_callable($_block_plugin1)) {
+throw new SmartyException('block tag \'php\' not callable or registered');
+}
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('php', array());
+$_block_repeat=true;
+echo $_block_plugin1(array(), null, $_smarty_tpl, $_block_repeat);
+while ($_block_repeat) {
+ob_start();?>
+require_once "modules/select-emp.php";
+<?php $_block_repeat=false;
+echo $_block_plugin1(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 </div>
 </div>
 </main>
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 bg-dark text-white fixed-bottom mt-auto">
           <p class="text-white"><center>Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. </center></p>
       </footer>
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <?php echo '<script'; ?>
+ src="bootstrap/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="bootstrap/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

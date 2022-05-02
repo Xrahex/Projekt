@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-22 13:02:34
+/* Smarty version 4.1.0, created on 2022-05-02 13:37:00
   from 'C:\xampp\htdocs\Projekt\templates\panel_pacjent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62628b4aca57c6_78258683',
+  'unifunc' => 'content_626fc25ccc9b44_90882121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52612b2039f7dfb04329c933b8b59c155c428242' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_pacjent.tpl',
-      1 => 1650624671,
+      1 => 1651491408,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62628b4aca57c6_78258683 (Smarty_Internal_Template $_smarty_tpl) {
+function content_626fc25ccc9b44_90882121 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -40,13 +40,20 @@ function content_62628b4aca57c6_78258683 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><?php echo '</script'; ?>
 >
+<link href='modules/jquery.dataTables.bootstrap5.css' rel='stylesheet' />
+<?php echo '<script'; ?>
+ src="modules/jquery.dataTables.bootstrap5.js"><?php echo '</script'; ?>
+>
 <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"><?php echo '</script'; ?>
 >
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <?php echo '<script'; ?>
- src='lib/main.js'><?php echo '</script'; ?>
+ src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
+ src='lib/main.js'><?php echo '</script'; ?>
+><?php echo '<script'; ?>
 >
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
@@ -59,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonText: {
       today: 'dzisiaj'
     },
-    events: 'test.php',
+    events: 'modules/kalendarz/wczytajp.php',
     eventDisplay: 'block',
     displayEventEnd: 'true',
     firstDay: 1
@@ -168,6 +175,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
+<?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['php'][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['php'][0] : null;
+if (!is_callable($_block_plugin1)) {
+throw new SmartyException('block tag \'php\' not callable or registered');
+}
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('php', array());
+$_block_repeat=true;
+echo $_block_plugin1(array(), null, $_smarty_tpl, $_block_repeat);
+while ($_block_repeat) {
+ob_start();
+echo $_smarty_tpl->tpl_vars['content1']->value;?>
+
+<?php $_block_repeat=false;
+echo $_block_plugin1(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 </div>
 </div>
 </main>

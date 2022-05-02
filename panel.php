@@ -113,22 +113,24 @@ $login=$_SESSION['login'];
 
 if ($_SESSION['typ']==1)
 {
+  $smarty->assign('content1','');
 $smarty->display('panel_administrator.tpl');
 }
 if ($_SESSION['typ']==2)
+
 {
-$q="SELECT * From pracownicy, users Where pracownicy.login='$login'";
+$q="SELECT * From pracownicy, users Where pracownicy.login=users.login and users.login='$login'";
 $result=mysqli_query($conn,$q);
 while($obj=mysqli_fetch_assoc($result))
 {
   $imie=$obj['imie'];
   $nazwisko=$obj['nazwisko'];
   $telefon=$obj['nr_telefonu'];
-  $mail=$obj['email'];
   $miejscowosc=$obj['miejscowosc'];
   $poczta=$obj['kod_pocztowy'];
   $ulica=$obj['ulica'];
   $dom=$obj['nr_domu'];
+  $mail=$obj['email'];
 }
 $smarty->assign('imie',$imie);
 $smarty->assign('nazwisko',$nazwisko);
@@ -142,7 +144,7 @@ $smarty->display('panell.tpl');
 }
 if ($_SESSION['typ']==3)
 {
-  $q="SELECT * From pacjenci, users Where pacjenci.login='$login'";
+  $q="SELECT * From pacjenci, users Where pacjenci.login=users.login and users.login='$login'";
   $result=mysqli_query($conn,$q);
   while($obj=mysqli_fetch_assoc($result))
   {

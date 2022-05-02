@@ -17,7 +17,7 @@ $smarty->assign('content','
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="bd-placeholder-img" src="img/s2.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+        <img class="bd-placeholder-img" src="img/budynek.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
 
         <div class="container">
           <div class="carousel-caption text-start">
@@ -37,12 +37,12 @@ $smarty->assign('content','
         </div>
       </div>
       <div class="carousel-item">
-        <img class="bd-placeholder-img" src="img/s3.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+        <img class="bd-placeholder-img" src="img/poczekalnia.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1 class="OutlineText">Toalety</h1>
-            <p class="OutlineText">Przystosowane do potrzeb pacjenta.</p>
+            <h1 class="OutlineText">Poczekalnia</h1>
+            <p class="OutlineText">Przystosowana aby umilić czas oczekiwania pacjenta.</p>
           </div>
         </div>
       </div>
@@ -61,38 +61,37 @@ $smarty->assign('content','
 <div class="container marketing">
 
   <!-- Three columns of text below the carousel -->
+  <h1 align="center"> Nasz kadra </h1>
+  <br>
   <div class="row">
     <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/Ben.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
       <h2>dr. Ben Woodhopper</h2>
       <p>Najbardziej wykształcony lekarz z całej kadry. Można o nim powiedzieć, że jest "od wszystkiego i do niczego". Kieruje się sercem, a nie rozumem.</p>
-      <p><a class="btn btn-secondary" href="#">Zobacz opinie</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/lysy.jpg" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
       <h2>dr. John Son</h2>
       <p>Swoją karierę zaczynał jak aktor. Ukończył studia medyczne z wyróżnieniem. Całe swoje życie poświęcił, aby zostać sławnym ginekologiem.</p>
-      <p><a class="btn btn-secondary" href="#">Zobacz opinie</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/dziad.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
       <h2>dr. Benny Heal</h2>
       <p>Lekarz z wieloletnim doświadczeniem. Posiada kompetencje pozwalające mu na zajmowanie się pacjentami w ciężkim stanie – kiedy pojawia się zagrożenie życia lub wielonarządowa niewydolność. </p>
-      <p><a class="btn btn-secondary" href="#">Zobacz opinie</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
   <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          <h2 class="featurette-heading" align="left">Zdrowie pacjenta jest dla nas najważniejsze.</h2>
+          <p class="lead"></p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/z1.jpeg" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/>
 
         </div>
       </div>
@@ -101,11 +100,11 @@ $smarty->assign('content','
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          <h2 class="featurette-heading" align="right">Tysiące zadowolonych klientów.</h2>
+          <p class="lead"></p>
         </div>
         <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/z2.jpg" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/>
 
         </div>
       </div>
@@ -114,11 +113,11 @@ $smarty->assign('content','
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          <h2 class="featurette-heading">Kadra z wieloletnim doświadczeniem.</h2>
+          <p class="lead">Od zarania dziejów staramy się pomagać naszym pacjentom i zwalczać wszelakie dolegliwości. Dokładamy wszelkich starań aby utrzymać dobrą renomę naszej kliniki.</p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/z3.png" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/>
 
         </div>
       </div>

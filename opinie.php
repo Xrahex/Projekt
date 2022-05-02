@@ -5,12 +5,13 @@ header("Location: logowanie.php");
 }
 ?>
 <?php
-require_once("Smarty/libs/Smarty.class.php");
-$smarty = new Smarty();
+require_once("Smarty/libs/SmartyBC.class.php");
+$smarty = new SmartyBC();
 
 
 
 $smarty->assign('title','Opinie');
+$smarty->assign('content1','');
 $smarty->assign('content','');
 
 

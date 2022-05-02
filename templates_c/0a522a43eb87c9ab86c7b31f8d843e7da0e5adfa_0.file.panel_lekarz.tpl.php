@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-22 12:57:08
+/* Smarty version 4.1.0, created on 2022-05-02 13:48:59
   from 'C:\xampp\htdocs\Projekt\templates\panel_lekarz.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62628a04339688_93238818',
+  'unifunc' => 'content_626fc52bc8e491_52913968',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a522a43eb87c9ab86c7b31f8d843e7da0e5adfa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projekt\\templates\\panel_lekarz.tpl',
-      1 => 1650625021,
+      1 => 1651491416,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62628a04339688_93238818 (Smarty_Internal_Template $_smarty_tpl) {
+function content_626fc52bc8e491_52913968 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -40,8 +40,16 @@ function content_62628a04339688_93238818 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><?php echo '</script'; ?>
 >
+<link href='modules/jquery.dataTables.bootstrap5.css' rel='stylesheet' />
+<?php echo '<script'; ?>
+ src="modules/jquery.dataTables.bootstrap5.js"><?php echo '</script'; ?>
+>
 <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"><?php echo '</script'; ?>
+>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src='lib/main.js'><?php echo '</script'; ?>
@@ -70,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     },
-    events: 'test.php',
+    events: 'modules/kalendarz/wczytaj.php',
     eventDisplay: 'block',
     displayEventEnd: 'true',
     firstDay: 1
@@ -178,7 +186,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <div style="width:60%;">
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
-<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
+<?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['php'][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['php'][0] : null;
+if (!is_callable($_block_plugin1)) {
+throw new SmartyException('block tag \'php\' not callable or registered');
+}
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('php', array());
+$_block_repeat=true;
+echo $_block_plugin1(array(), null, $_smarty_tpl, $_block_repeat);
+while ($_block_repeat) {
+ob_start();
+echo $_smarty_tpl->tpl_vars['content1']->value;?>
+
+<?php $_block_repeat=false;
+echo $_block_plugin1(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);
+echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
 </div>
 </div>

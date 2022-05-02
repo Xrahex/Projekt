@@ -1,6 +1,6 @@
 <?php
-require_once("Smarty/libs/Smarty.class.php");
-$smarty = new Smarty();
+require_once("Smarty/libs/SmartyBC.class.php");
+$smarty = new SmartyBC();
 
 
 
@@ -22,13 +22,13 @@ $smarty->assign('content','
   <a href="usuwanie_pracownika.php" class="btn btn-primary btn-danger btn-lg" role="button" aria-pressed="true">Zwolnij</a>
   </div>
   <div class="btn-group flex-row align-items-center mb-4 col-md-4" role="group" aria-label="Basic example">
-    <a href="index.php" class="btn btn-primary btn-primary btn-lg" role="button" aria-pressed="true">Edytuj</a>
+    <a href="emp-managment.php" class="btn btn-primary btn-primary btn-lg" role="button" aria-pressed="true">Edytuj</a>
   </div>
 </div>
 </div>
 </div>
 ');
-
+  $smarty->assign('content1','');
 $smarty->display('panel_administrator.tpl');
 
 ?>
