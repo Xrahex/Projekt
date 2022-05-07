@@ -45,7 +45,7 @@
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a href="index.php"> <img src="img/logop.png" width="30" height="30" href="index.php" style="margin-left: 10px; margin-right: 5px;"/></a>
+      <a href="index.php"> <img src="img/logo.png" width="30" height="30" href="index.php" style="margin-left: 10px; margin-right: 5px;"/></a>
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Klinika Pixel</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,26 +78,49 @@
     <hr style="margin-bottom:30px; margin-top:80px;">
 <footer class="container">
   <div class="row">
-    <div class="col-5">
-  <p align="center"> Kontakt </p>
+    <div class="col-md-4">
+      <center><h2>Klinika</h2></center>
   </div>
+  <div class="col-md-4">
+      <center><h2>Użytkownik</h2></center>
+</div>
+<div class="col-md-4">
+      <center><h2>Kontakt</h2></center>
+</div>
   </div>
     <div class="row">
-      <div class="col-2">
-        <p class="fw-bold" style="margin:0px; padding:0px;">Placówka czynna: </p>
-        <br>
-        <p class="fw-bold" style="margin:0px; padding:0px;">Telefon: </p>
-        <p class="fw-bold" style="margin:0px; padding:0px;">Email: </p>
+      <div class="col-4" align="center">
+      <p></p>
+      <p>Klinika Pixel SP. Z O.O.</p>
+<p>ul. Powstańców 5</p>
+<p>60-123 Sosnowiec</p>
+<a href="Regulamin.pdf" class="text-dark text-decoration-none">Polityka prywatności</a>
       </div>
-      <div class="col-3">
-        <p align="right" style="margin:0px; padding:0px;">pon-sob 8:00-18:00 <br>Obra, ul. Kanałowa 2</p>
-        <p align="right" style="margin:0px; padding:0px;">(+48) 690 438 163</p>
-        <p align="right" style="margin:0px; padding:0px;">klinikapixel@gmail.com</p>
+      <div class="col-4" align="center">
+        <p></p>
+        <a class="text-decoration-none link-secondary" align="center" href="index.php">Strona główna</a>
+        <p></p>
+        <a class="text-decoration-none link-secondary" align="center" href="cennik.php">Cennik</a>
+        <p></p>
+        <a class="text-decoration-none link-secondary" align="center" href="faq.php">FAQ</a>
+        <p></p>
+        <a class="text-decoration-none link-secondary" align="center" href="o_nas.php">O nas</a>
       </div>
+    <div class="col-4" align="center">
+      <p></p>
+      <p class="fw-bold" style="margin:0px; padding:0px;">Placówka czynna: </p>
+      <p style="margin:0px; padding:0px;">pon-sob 8:00-18:00
+      <p></p>
+      <p class="fw-bold" style="margin:0px; padding:0px;">Telefon: </p>
+      <p style="margin:0px; padding:0px;">(+48) 690 438 163</p>
+      <p></p>
+      <p class="fw-bold" style="margin:0px; padding:0px;">Email: </p>
+      <p style="margin:0px; padding:0px;">klinikapixel@gmail.com</p>
+    </div>
       </div>
       <br>
       <span class="fixed-bottom"><p class="float-end"><a href="#"><img src=img/strzalka.png width="80px" height="50px" style="margin:10px; padding:0px;"></img></a></p></span>
-      <p class="fw-lighter">Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone. <a href="Regulamin.pdf" class="text-dark">Polityka prywatności</a></p>
+      <p class="fw-lighter">Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone.</p>
 </footer>
 </main>
     <script src="bootstrap/bootstrap.min.js"></script>
