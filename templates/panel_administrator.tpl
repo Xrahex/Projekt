@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     },
-    events: 'test.php',
+    events: 'modules/kalendarz/admin.php',
     eventDisplay: 'block',
     displayEventEnd: 'true',
     firstDay: 1
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
 		<path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Zm7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
 		</svg>
-          Wizyty <span class="badge badge-light">9</span>
+          Wizyty
         </a>
       </li>
 	  	  <li>
@@ -113,17 +113,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		<path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
 		<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
 		</svg>
-          Zgłoszenia
+          Zgłoszenia <span class="badge badge-light rounded-circle" style="background-color:#0d6efd;">{php}
+            require "modules/db.php";
+            $conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z baza danych");
+            mysqli_set_charset($conn,"utf8");
+            $q="Select count(*) from zgloszenia where status=1 group by nr_zgloszenia ";
+            $result=mysqli_query($conn,$q);
+            $ile = mysqli_num_rows($result);
+            if($ile==0){
+            }
+            else{
+            echo $ile;
+          }
+            {/php}</span>
         </a>
       </li>
-	  <li>
-        <a href="opinie.php" class="nav-link text-white najedz">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-		<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-		</svg>
-          Opinie
-        </a>
-      </li>
+
 	  <li>
         <a href="ustawienia_konta.php" class="nav-link text-white najedz">
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">

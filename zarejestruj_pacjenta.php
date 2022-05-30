@@ -117,6 +117,7 @@ $smarty->assign('content','
 ');
 
 
+
 if ($_SESSION['typ']==1)
 {
 $smarty->display('panel_administrator.tpl');

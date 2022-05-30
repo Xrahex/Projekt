@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
 		<path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Zm7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
 		</svg>
-          Wizyty <span class="badge badge-light">9</span>
+          Wizyty
         </a>
       </li>
 	  <li>
@@ -86,7 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
 		<path d="M14.121 1.879a3 3 0 0 0-4.242 0L8.733 3.026l4.261 4.26 1.127-1.165a3 3 0 0 0 0-4.242ZM12.293 8 8.027 3.734 3.738 8.031 8 12.293 12.293 8Zm-5.006 4.994L3.03 8.737 1.879 9.88a3 3 0 0 0 4.241 4.24l.006-.006 1.16-1.121ZM2.679 7.676l6.492-6.504a4 4 0 0 1 5.66 5.653l-1.477 1.529-5.006 5.006-1.523 1.472a4 4 0 0 1-5.653-5.66l.001-.002 1.505-1.492.001-.002Z"/>
 		<path d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707ZM8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707Z"/>
 		</svg>
-          E-recepta
+          E-recepta <span class="badge badge-light rounded-circle" style="background-color:#0d6efd;">{php}
+            require "modules/db.php";
+            $conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z baza danych");
+            mysqli_set_charset($conn,"utf8");
+            $id=$_SESSION['id'];
+            $q="Select count(*) from recepty where pacjent_id='$id' and status=1 group by nazwa ";
+            $result=mysqli_query($conn,$q);
+            $ile = mysqli_num_rows($result);
+            if($ile==0){
+            }
+            else{
+            echo $ile;
+          }
+            {/php}</span>
         </a>
       </li>
 
@@ -96,7 +109,20 @@ document.addEventListener('DOMContentLoaded', function() {
 		<path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
 		<path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
 		</svg>
-          Faktury
+          Faktury <span class="badge badge-light rounded-circle" style="background-color:#0d6efd;">{php}
+            require "modules/db.php";
+            $conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z baza danych");
+            mysqli_set_charset($conn,"utf8");
+            $id=$_SESSION['id'];
+            $q="Select count(*) from faktury where id_pacjenta='$id' and stan=1 group by nazwa ";
+            $result=mysqli_query($conn,$q);
+            $ile = mysqli_num_rows($result);
+            if($ile==0){
+            }
+            else{
+            echo $ile;
+          }
+            {/php}</span>
         </a>
       </li>
 

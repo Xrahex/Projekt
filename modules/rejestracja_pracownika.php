@@ -12,7 +12,7 @@ function rand_string( $length ) {
     return substr(str_shuffle($chars),0,$length);
 }
 
-require_once "db.php";
+require "db.php";
 $conn=mysqli_connect($host,$user,$pass,$db) or die("Nie udało się połączyć z baza danych");
 mysqli_set_charset($conn,"utf8");
 $login=rand_string(8);

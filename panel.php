@@ -12,7 +12,34 @@ $smarty = new SmartyBC();
 
 $smarty->assign('title','Strona');
 $smarty->assign('content','
-<div align="center"><h1>Profil administratora</h1></div>
+<center><div class="p-3 mb-2 bg-success text-white">Zalogowano na konto administratora</div></center>
+<br><br>
+<div class="card mb-4">
+    <div class="card-header" align="center"><h1>Twój profil</h1></div>
+<div class="col-md-12">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Imie</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <p> Admin </p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Nazwisko</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    <p> Admin </p>
+                    </div>
+                  </div>
+
+                    </div>
+                  </div>
+</div>
+
 ');
 $smarty->assign('menu','
 
@@ -123,23 +150,23 @@ $q="SELECT * From pracownicy, users Where pracownicy.login=users.login and users
 $result=mysqli_query($conn,$q);
 while($obj=mysqli_fetch_assoc($result))
 {
-  $imie=$obj['imie'];
-  $nazwisko=$obj['nazwisko'];
-  $telefon=$obj['nr_telefonu'];
-  $miejscowosc=$obj['miejscowosc'];
-  $poczta=$obj['kod_pocztowy'];
-  $ulica=$obj['ulica'];
-  $dom=$obj['nr_domu'];
-  $mail=$obj['email'];
+  @$imie=$obj['imie'];
+  @$nazwisko=$obj['nazwisko'];
+  @$telefon=$obj['nr_telefonu'];
+  @$miejscowosc=$obj['miejscowosc'];
+  @$poczta=$obj['kod_pocztowy'];
+  @$ulica=$obj['ulica'];
+  @$dom=$obj['nr_domu'];
+  @$mail=$obj['email'];
 }
-$smarty->assign('imie',$imie);
-$smarty->assign('nazwisko',$nazwisko);
-$smarty->assign('telefon',$telefon);
-$smarty->assign('email',$mail);
-$smarty->assign('miejscowosc',$miejscowosc);
-$smarty->assign('poczta',$poczta);
-$smarty->assign('ulica',$ulica);
-$smarty->assign('dom',$dom);
+@$smarty->assign('imie',$imie);
+@$smarty->assign('nazwisko',$nazwisko);
+@$smarty->assign('telefon',$telefon);
+@$smarty->assign('email',$mail);
+@$smarty->assign('miejscowosc',$miejscowosc);
+@$smarty->assign('poczta',$poczta);
+@$smarty->assign('ulica',$ulica);
+@$smarty->assign('dom',$dom);
 $smarty->display('panell.tpl');
 }
 if ($_SESSION['typ']==3)
@@ -148,25 +175,25 @@ if ($_SESSION['typ']==3)
   $result=mysqli_query($conn,$q);
   while($obj=mysqli_fetch_assoc($result))
   {
-    $imie=$obj['imie'];
-    $nazwisko=$obj['nazwisko'];
-    $pesel=$obj['pesel'];
-    $telefon=$obj['nr_telefonu'];
-    $mail=$obj['email'];
-    $miejscowosc=$obj['miejscowosc'];
-    $poczta=$obj['kod_pocztowy'];
-    $ulica=$obj['ulica'];
-    $dom=$obj['nr_domu'];
+    @$imie=$obj['imie'];
+    @$nazwisko=$obj['nazwisko'];
+    @$pesel=$obj['pesel'];
+    @$telefon=$obj['nr_telefonu'];
+    @$mail=$obj['email'];
+    @$miejscowosc=$obj['miejscowosc'];
+    @$poczta=$obj['kod_pocztowy'];
+    @$ulica=$obj['ulica'];
+    @$dom=$obj['nr_domu'];
   }
-  $smarty->assign('imie',$imie);
-  $smarty->assign('nazwisko',$nazwisko);
-  $smarty->assign('pesel',$pesel);
-  $smarty->assign('telefon',$telefon);
-  $smarty->assign('email',$mail);
-  $smarty->assign('miejscowosc',$miejscowosc);
-  $smarty->assign('poczta',$poczta);
-  $smarty->assign('ulica',$ulica);
-  $smarty->assign('dom',$dom);
+  @$smarty->assign('imie',$imie);
+  @$smarty->assign('nazwisko',$nazwisko);
+  @$smarty->assign('pesel',$pesel);
+  @$smarty->assign('telefon',$telefon);
+  @$smarty->assign('email',$mail);
+  @$smarty->assign('miejscowosc',$miejscowosc);
+  @$smarty->assign('poczta',$poczta);
+  @$smarty->assign('ulica',$ulica);
+  @$smarty->assign('dom',$dom);
 $smarty->display('panelp.tpl');
 }
 ?>

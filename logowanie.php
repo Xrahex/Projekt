@@ -77,7 +77,7 @@ header("Location:panel.php");
                   if($ile==0)
                   {
                     echo "<br>";
-	                   echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Nie ma takiego użytkownika!</strong><button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>  </div>";
+	                   echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Niepoprawny login lub hasło!</strong><button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>  </div>";
                    }
                    else
                    {

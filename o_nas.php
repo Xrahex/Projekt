@@ -43,7 +43,7 @@ $smarty->assign('content','
 		<hr class="featurette-divider">
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">dr. Benny Heal <span class="text-muted">specjalista dermatolog, lekarz medycyny estetycznej</span></h2>
+          <h2 class="featurette-heading">dr. Benny Heal <span class="text-muted">specjalista dermatolog, lekarz medycyny estetycznej.</span></h2>
           <p class="lead">Lekarz z 25 letnim doświadczeniem w medycynie estetycznej. Jest również właścicielem Kliniki Pixel.
 			dr. Benny Heal zdobywał doświadczenie m.in. w prestiżowych Klinikach w Nowym Jorku, Wiedniu, Heidelbergu i Paryżu. Specjalizuje się w leczeniu trudnych przypadków z zakresu medycyny estetycznej.
 			dr. Benny Heal współpracuje z najlepszymi światowymi markami, trenerami i coachami z Francji, Ameryki, Korei, Austrii i Niemiec. Regularnie rozwija swoje umiejętności z najnowocześniejszych technologii. </p>
@@ -75,7 +75,7 @@ $smarty->assign('content','
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">dr. Ben Woodhopper <span class="text-muted">specjalista dermatolog, lekarz medycyny estetycznej</span></h2>
+          <h2 class="featurette-heading">dr. Ben Woodhopper <span class="text-muted">specjalista dermatolog.</span></h2>
           <p class="lead">Lekarz i współwłaściciel Kliniki Pixel. Jest absolwentem Śląskiego Uniwersytetu Medycznego w Katowicach. Medycynę studiował również na renomowanym Uniwersytecie im. Georga Augusta w Getyndze (Niemcy).
 			Już w czasie pobierania nauki brał udział w warsztatach i kursach z zakresu medycyny estetycznej w Polsce i za granicą.
 			Swoje zamiłowanie do piękna i estetyki pogłębiał studiując na Akademiach i Uniwersytetach w Wiedniu, Krakowie i Katowicach otrzymując tytuł magistra sztuki. </p>

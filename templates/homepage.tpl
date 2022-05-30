@@ -41,7 +41,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="padding:0px;">
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -75,7 +75,10 @@
   </header>
 
 {$content}
-    <hr style="margin-bottom:30px; margin-top:80px;">
+    <br><br><br>
+</body>
+<section class="d-flex flex-column bg-primary text-white" style="background-color:#0000FF;">
+<br>
 <footer class="container">
   <div class="row">
     <div class="col-md-4">
@@ -94,17 +97,17 @@
       <p>Klinika Pixel SP. Z O.O.</p>
 <p>ul. Powstańców 5</p>
 <p>60-123 Sosnowiec</p>
-<a href="Regulamin.pdf" class="text-dark text-decoration-none">Polityka prywatności</a>
+<a href="Regulamin.pdf" class="text-white text-decoration-none">Polityka prywatności</a>
       </div>
       <div class="col-4" align="center">
         <p></p>
-        <a class="text-decoration-none link-secondary" align="center" href="index.php">Strona główna</a>
+        <a class="text-decoration-none text-white" align="center" href="index.php">Strona główna</a>
         <p></p>
-        <a class="text-decoration-none link-secondary" align="center" href="cennik.php">Cennik</a>
+        <a class="text-decoration-none text-white" align="center" href="cennik.php">Cennik</a>
         <p></p>
-        <a class="text-decoration-none link-secondary" align="center" href="faq.php">FAQ</a>
+        <a class="text-decoration-none text-white" align="center" href="faq.php">FAQ</a>
         <p></p>
-        <a class="text-decoration-none link-secondary" align="center" href="o_nas.php">O nas</a>
+        <a class="text-decoration-none text-white" align="center" href="o_nas.php">O nas</a>
       </div>
     <div class="col-4" align="center">
       <p></p>
@@ -118,13 +121,15 @@
       <p style="margin:0px; padding:0px;">klinikapixel@gmail.com</p>
     </div>
       </div>
-      <br>
-      <span class="fixed-bottom"><p class="float-end"><a href="#"><img src=img/strzalka.png width="80px" height="50px" style="margin:10px; padding:0px;"></img></a></p></span>
-      <p class="fw-lighter">Copyright &copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone.</p>
+	<span class="fixed-bottom"><p class="float-end"><a href="#"><img src=img/strzalka.png width="80px" height="50px" style="margin:10px; padding:0px;"></img></a></p></span>
+<br>
 </footer>
-</main>
+<div class="text-center mt-auto p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+	<a>&copy; 2022 Klikina "Pixel". Wszelkie prawa zastrzeżone.</a>
+</div>
+</section>
+
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 </html>

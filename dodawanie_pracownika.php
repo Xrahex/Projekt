@@ -10,6 +10,7 @@ $smarty = new SmartyBC();
 
 $smarty->assign('title','Dodawanie Pracownika');
 $smarty->assign('menu','');
+$smarty->assign('content1','');
 $smarty->assign('content','
 
 <br><br><br><br>

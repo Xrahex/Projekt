@@ -88,7 +88,7 @@ $smarty->assign('content','
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading" align="left">Zdrowie pacjenta jest dla nas najważniejsze.</h2>
-          <p class="lead"></p>
+		  <p class="lead" align="left">Dbamy, aby nasi pacjenci mieli dostęp do najnowszego sprzętu medycznego, który skutecznie leczy ich schorzenia.</p>
         </div>
         <div class="col-md-5">
           <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/z1.jpeg" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/>
@@ -100,8 +100,9 @@ $smarty->assign('content','
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading" align="right">Tysiące zadowolonych klientów.</h2>
-          <p class="lead"></p>
+          <h2 class="featurette-heading" align="right">Tysiące osób zaufało naszej klinice.</h2>
+		  <br>
+		  <p class="lead" align="right">Skuteczność naszych zabiegów jest jednym z najwyższych poziomów w Polsce. Ilość przeprowadzonych zabiegów jest porównywalna do najlepszych klinik w całej Europie.</p>
         </div>
         <div class="col-md-5 order-md-1">
 <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/z2.jpg" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"/>
